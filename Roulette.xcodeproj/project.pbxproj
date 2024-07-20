@@ -8,13 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		D7186C5A2C4B3AFC006E54CE /* RouletteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7186C592C4B3AFC006E54CE /* RouletteApp.swift */; };
-		D7186C5C2C4B3AFC006E54CE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7186C5B2C4B3AFC006E54CE /* ContentView.swift */; };
 		D7186C5E2C4B3AFF006E54CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7186C5D2C4B3AFF006E54CE /* Assets.xcassets */; };
 		D7186C622C4B3AFF006E54CE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7186C612C4B3AFF006E54CE /* Preview Assets.xcassets */; };
 		D7186C6C2C4B3AFF006E54CE /* RouletteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7186C6B2C4B3AFF006E54CE /* RouletteTests.swift */; };
 		D7186C762C4B3AFF006E54CE /* RouletteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7186C752C4B3AFF006E54CE /* RouletteUITests.swift */; };
 		D7186C782C4B3B00006E54CE /* RouletteUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7186C772C4B3B00006E54CE /* RouletteUITestsLaunchTests.swift */; };
-		D7186C882C4B3CBE006E54CE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7186C872C4B3CBD006E54CE /* HomeView.swift */; };
 		D7186C8A2C4B3DA8006E54CE /* RouletteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7186C892C4B3DA8006E54CE /* RouletteView.swift */; };
 		D7186C8D2C4B3DF8006E54CE /* RouletteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7186C8C2C4B3DF8006E54CE /* RouletteModel.swift */; };
 		D7186C8F2C4B3E0F006E54CE /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7186C8E2C4B3E0F006E54CE /* Element.swift */; };
@@ -43,7 +41,6 @@
 /* Begin PBXFileReference section */
 		D7186C562C4B3AFC006E54CE /* Roulette.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roulette.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7186C592C4B3AFC006E54CE /* RouletteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouletteApp.swift; sourceTree = "<group>"; };
-		D7186C5B2C4B3AFC006E54CE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D7186C5D2C4B3AFF006E54CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D7186C5F2C4B3AFF006E54CE /* Roulette.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Roulette.entitlements; sourceTree = "<group>"; };
 		D7186C612C4B3AFF006E54CE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -52,7 +49,6 @@
 		D7186C712C4B3AFF006E54CE /* RouletteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RouletteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7186C752C4B3AFF006E54CE /* RouletteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouletteUITests.swift; sourceTree = "<group>"; };
 		D7186C772C4B3B00006E54CE /* RouletteUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouletteUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		D7186C872C4B3CBD006E54CE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		D7186C892C4B3DA8006E54CE /* RouletteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouletteView.swift; sourceTree = "<group>"; };
 		D7186C8C2C4B3DF8006E54CE /* RouletteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouletteModel.swift; sourceTree = "<group>"; };
 		D7186C8E2C4B3E0F006E54CE /* Element.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Element.swift; sourceTree = "<group>"; };
@@ -110,9 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				D7186C8B2C4B3DAC006E54CE /* RouletteView */,
-				D7186C842C4B3CA3006E54CE /* Home */,
 				D7186C592C4B3AFC006E54CE /* RouletteApp.swift */,
-				D7186C5B2C4B3AFC006E54CE /* ContentView.swift */,
 				D7186C5D2C4B3AFF006E54CE /* Assets.xcassets */,
 				D7186C5F2C4B3AFF006E54CE /* Roulette.entitlements */,
 				D7186C602C4B3AFF006E54CE /* Preview Content */,
@@ -143,14 +137,6 @@
 				D7186C772C4B3B00006E54CE /* RouletteUITestsLaunchTests.swift */,
 			);
 			path = RouletteUITests;
-			sourceTree = "<group>";
-		};
-		D7186C842C4B3CA3006E54CE /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				D7186C872C4B3CBD006E54CE /* HomeView.swift */,
-			);
-			path = Home;
 			sourceTree = "<group>";
 		};
 		D7186C8B2C4B3DAC006E54CE /* RouletteView */ = {
@@ -300,10 +286,8 @@
 				D7186C8A2C4B3DA8006E54CE /* RouletteView.swift in Sources */,
 				D7186C8D2C4B3DF8006E54CE /* RouletteModel.swift in Sources */,
 				D7186C8F2C4B3E0F006E54CE /* Element.swift in Sources */,
-				D7186C882C4B3CBE006E54CE /* HomeView.swift in Sources */,
 				D7186C932C4B5635006E54CE /* TriangleShape.swift in Sources */,
 				D7186C952C4C4E44006E54CE /* RouletteShapeView.swift in Sources */,
-				D7186C5C2C4B3AFC006E54CE /* ContentView.swift in Sources */,
 				D7186C5A2C4B3AFC006E54CE /* RouletteApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

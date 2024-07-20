@@ -13,8 +13,9 @@ struct RouletteView: View {
     @State private var showAlert = false
     @State private var alertMessage = ""
     @State private var rotation: Double = 0
+    @State private var nameLabel = ""
     
-    var model: RoulleteModel
+    @StateObject var model: RoulleteModel
     var rouletteTime: Int = 10
     var colors = [Color.orange, Color.red, Color.green, Color.blue, Color.yellow, Color.pink, Color.cyan, Color.brown, Color.gray, Color.purple]
     
@@ -44,6 +45,23 @@ struct RouletteView: View {
                 }
                 .buttonStyle(.borderedProminent)
                 .padding()
+                Spacer()
+                
+                TextField("Name", text: $nameLabel)
+                    .padding()
+                    .background(Color(.systemGray6))
+                    .cornerRadius(8)
+                    .padding(.horizontal, 100)
+                    .padding(.vertical, 20)
+                
+                Button(action: {
+                    addToRoulette()
+                    print(model.getNumberElements())
+                    print(model.getElements())
+                }) {
+                    Text("Save Name")
+                }
+                .buttonStyle(.bordered)
             }
             .alert(isPresented: $showAlert) {
                 Alert(title: Text(alertMessage),
@@ -57,6 +75,12 @@ struct RouletteView: View {
             self.alertMessage = "\(winner) is the Winner!"
             self.showAlert = true
             self.isRotating = false
+        }
+    }
+    
+    func addToRoulette() {
+        if !isRotating {
+            model.addElement(name: nameLabel)
         }
     }
     

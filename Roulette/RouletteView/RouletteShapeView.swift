@@ -13,6 +13,15 @@ struct RouletteShapeView: View {
     var endAngle: Double
     var color: Color
     var name: String
+    var imageSize: Double
+    
+    init(startAngle: Double, endAngle: Double, color: Color, name: String) {
+        self.startAngle = startAngle
+        self.endAngle = endAngle
+        self.color = color
+        self.name = name
+        self.imageSize = 2*(endAngle - startAngle)
+    }
     
     var body: some View {
         GeometryReader { geometry in
@@ -23,15 +32,15 @@ struct RouletteShapeView: View {
                 Image("mp10")
                     .resizable()
                     .scaledToFit()
-                    .frame(maxWidth: 50, maxHeight: 50)
                     .clipShape(Circle())
-                    .rotationEffect(self.textRotation())
-                    .position(self.textPosition(in: geometry.size))
+                    .frame(maxWidth: imageSize, maxHeight: 80)
+                    .rotationEffect(self.imageRotation())
+                    .position(self.imagePosition(in: geometry.size))
             }
         }
     }
     
-    private func textPosition(in size: CGSize) -> CGPoint {
+    private func imagePosition(in size: CGSize) -> CGPoint {
         let center = CGPoint(x: size.width / 2, y: size.height / 2)
         let radius = min(size.width, size.height) / 2 / 1.5
         let midAngle = (startAngle + endAngle) / 2
@@ -40,9 +49,9 @@ struct RouletteShapeView: View {
         return CGPoint(x: x, y: y)
     }
     
-    private func textRotation() -> Angle {
+    private func imageRotation() -> Angle {
         let midAngle = (startAngle + endAngle) / 2
-        return Angle(degrees: midAngle + 90) // Rotate to make it horizontal along the shape
+        return Angle(degrees: midAngle + 90)
     }
 }
 
